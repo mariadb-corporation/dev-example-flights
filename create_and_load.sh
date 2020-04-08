@@ -1,14 +1,12 @@
 #!/bin/bash
 
-#host=$1
-#port=$2
-#user=$3
-#pass=$4
+host=$1
+port=$2
+user=$3
+pass=$4
 
 # use the arguments to connect to MariaDB SkySQl
-#mariadb="mariadb --host ${host} --port ${port} --user ${user} -p${pass} --ssl-ca skysql_chain.pem"
-
-mariadb="mariadb --host sky0001355.mdb0001390.db.skysql.net --port 5003 --user DB00001844 -pPassword123! --ssl-ca skysql_chain.pem"
+mariadb="mariadb --host ${host} --port ${port} --user ${user} -p${pass} --ssl-ca skysql_chain.pem"
 
 # non-SkySQL connection
 #mariadb="mariadb --host ${host} --port ${port} --user ${user} -p${pass}"
