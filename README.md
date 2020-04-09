@@ -79,7 +79,9 @@ $ ./get_flight_data.sh
 $ ./create_and_load.sh host_url port user password
 ```
 
-**Note:** By default the [create_and_load.sh](create_and_load.sh) script has ssl enabled and assumes a MariaDB [SkySQL certificate authority chain file](https://mariadb.com/products/skysql/docs/operations/connecting/#certificate-authority) exists next to it. Feel free to modify accordingly.
+**Note:** Remember to wrap argument values in single quotes if they contain special characters (e.g. !)
+
+By default the [create_and_load.sh](create_and_load.sh) script has ssl enabled and assumes a MariaDB [SkySQL certificate authority chain file](https://mariadb.com/products/skysql/docs/operations/connecting/#certificate-authority) exists next to it. Feel free to modify accordingly.
 
 ### Anatomy of the app <a name="app"></a>
 
