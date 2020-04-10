@@ -1,6 +1,6 @@
 # Flights
 
-**Flights** is a web application, backed by the power of the MariaDB Connectors and [MariaDB ColumnStore database](https://mariadb.com/docs/features/mariadb-columnstore/), allows you to analyze over 180 million [flight records from the United States Department of Transportation](https://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236&DB_Short_Name=On-Time) in real time without needing to add any indexes!
+**Flights** is a web application, backed by the power of the MariaDB Connectors and [MariaDB ColumnStore database](https://mariadb.com/docs/features/mariadb-columnstore/), allows you to analyze millions [flight records from the United States Department of Transportation](https://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236&DB_Short_Name=On-Time) in real time without needing to add any indexes!
 
 <p align="center" spacing="10">
     <kbd>
@@ -66,12 +66,11 @@ This application uses (US domestic) flight data freely available from the [Burea
 
 Complete the following steps.
 
-1. Download the flight data (approx. 182 million records)
+1. Download the flight data (approx. 180 million records, ~30 GB). Depending on your internet connection this may take some time. However, you can simply modify [get_flight_data.sh](get_flight_data.sh) script to adjust the amount of flight information that is downloaded. Doing so will not disrupt subsequent steps. 
 
 ```bash 
 $ ./get_flight_data.sh
 ```
-**Note:** Feel free to modify the amount of flight information downloaded by modifying the [get_flight_data.sh](get_flight_data.sh) script directly.
 
 2. Create the `flights` database, `airlines`/`airports`/`flights` tables, and load the tables with data. Be sure to include your database instance specific information (host url, port number, username, and password)
 
