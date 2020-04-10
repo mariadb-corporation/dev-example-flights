@@ -1,4 +1,4 @@
-# Orders - Node.js API
+# Flights - Node.js API
 
 1. [Environment and compatibility](#compatibility)
 2. [Getting started with the app](#getting-started)
