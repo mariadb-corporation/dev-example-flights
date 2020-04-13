@@ -50,7 +50,7 @@ To download and deploy MariaDB check out the instructions [here](https://mariadb
 
 ## Getting started <a name="getting-started"></a>
 
-In order to run the Orders application you will need to have a MariaDB instance to connect to. For more information please check out "[Get Started with MariaDB](https://mariadb.com/get-started-with-mariadb/)".
+In order to run the Flights application you will need to have a MariaDB instance to connect to. For more information please check out "[Get Started with MariaDB](https://mariadb.com/get-started-with-mariadb/)".
 
 ### Get the code <a name="code"></a>
 
