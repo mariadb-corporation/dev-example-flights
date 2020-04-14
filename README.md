@@ -8,10 +8,13 @@
     </kbd>
 </p>
 
-The following will walk you through the steps for getting this application up and running (locally) within minutes! This application is completely open source. Please feel free to use it and the source code as you see fit.
+This README will walk you through the steps for getting the Flights web application up and running using MariaDB ColumnStore. To ensure success, please follow the instructions in order.
+
+**Note:** The code provided within this repository is completely open source. Please feel free to use it as you see fit.
 
 # Table of Contents
-1. [Introduction to MariaDB](#overview)
+1. [Requirements](#requirements)
+2. [Introduction to MariaDB](#introduction)
     1. [MariaDB Platform](#platform)
     2. [MariaDB SkySQL](#skysql)
 3. [Getting started](#getting-started)
@@ -22,7 +25,14 @@ The following will walk you through the steps for getting this application up an
 4. [Support and contribution](#support-contribution)
 5. [License](#license)
 
-## Overview <a name="overview"></a>
+## Requirements <a name="requirements"></a>
+
+This sample application, no matter which API project you target, will requires the following to be installed/enabled on your machine:
+
+* [MariaDB Client](https://mariadb.com/products/skysql/docs/clients/), used to connect to MariaDB instances.
+* [Bash](https://www.gnu.org/software/bash/) (if you are using Windows 10, you will need to enable the Windows Subsystem for Linux), used to run the data download script
+
+## Introduction to MariaDB <a name="introduction"></a>
 
 ### MariaDB Platform <a name="platform"></a>
 
