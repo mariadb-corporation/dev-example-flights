@@ -61,12 +61,23 @@ export default class AirlinesFlightsInfo extends Component {
     }
 
     async getStats(origin, dest, yearFrom, yearTo, month, day) {
-        const response = await fetch('/api/flights/airlines_stats?o=' + origin + "&dst=" + dest + "&yf=" 
-                                                                      + yearFrom + "&yt=" + yearTo + "&m=" + month + "&d=" + day);
+        var url = '/api/flights/airlines_stats?o=' + origin + "&dst=" + dest + "&yf=" + yearFrom + "&yt=" + yearTo;
+
+        if (month != null) {
+            url += "&m=" + month;
+        }
+
+        if (month != null) {
+            url += "&d=" + day;
+        }
+
+        const response = await fetch(url);
         const body = await response.json();
+
         if (response.status !== 200) {
             throw Error(body.message) 
         } 
+        
         return body;
     }; 
     

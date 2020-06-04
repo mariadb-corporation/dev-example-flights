@@ -68,22 +68,44 @@ export default class AirlineFlightsInfo extends Component {
     }
 
     async getAirlineDelays(origin, dest, airline, yearFrom, yearTo, month, day) {
-        const response = await fetch('/api/flights/airline_delays?o=' + origin + "&dst=" + dest + "&a=" + airline +
-                                                                      "&yf=" + yearFrom + "&yt=" + yearTo + "&m=" + month + "&d=" + day);
-        const body = await response.json();
+        var url = '/api/flights/airline_delays?o=' + origin + "&dst=" + dest + "&a=" + airline + "&yf=" + yearFrom + "&yt=" + yearTo;
+        
+        if (month != null) {
+            url += "&m=" + month;
+        }
+
+        if (month != null) {
+            url += "&d=" + day;
+        }
+
+        var response = await fetch(url);
+        var body = await response.json();
+
         if (response.status !== 200) {
             throw Error(body.message) 
         }
+
         return body;
     }; 
 
     async getDelaysComparison(origin, dest, airline, yearFrom, yearTo, month, day) {
-        const response = await fetch('/api/flights/delays_comparison?o=' + origin + "&dst=" + dest + "&a=" + airline +
-                                                                        "&yf=" + yearFrom + "&yt=" + yearTo + "&m=" + month + "&d=" + day);
-        const body = await response.json();
+        var url = '/api/flights/delays_comparison?o=' + origin + "&dst=" + dest + "&a=" + airline + "&yf=" + yearFrom + "&yt=" + yearTo ;
+
+        if (month != null) {
+            url += "&m=" + month;
+        }
+
+        if (month != null) {
+            url += "&d=" + day;
+        }
+
+        var response = await fetch(url);
+        var body = await response.json();
+
         if (response.status !== 200) {
             throw Error(body.message) 
         }
+
         return body;
     }; 
 
