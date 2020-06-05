@@ -30,7 +30,7 @@ DB_PASS=<password>
 DB_NAME=flights
 ```
 
-**Configuring db.js**
+**Connection details**
 
 The environmental variables from `.env` are used to connect to the MariaDB using the MariaDB Python Connector configuration pool settings:
 
