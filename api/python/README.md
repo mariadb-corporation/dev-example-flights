@@ -32,7 +32,7 @@ DB_NAME=flights
 
 **Configuring db.js**
 
-The environmental variables from `.env` are used within the [db.js](src/db.js) for the MariaDB Python Connector configuration pool settings:
+The environmental variables from `.env` are used to connect to the MariaDB using the MariaDB Python Connector configuration pool settings:
 
 ```python
 config = {
