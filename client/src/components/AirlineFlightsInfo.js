@@ -84,7 +84,7 @@ export default class AirlineFlightsInfo extends Component {
         if (response.status !== 200) {
             throw Error(body.message) 
         }
-
+        body = '{"weather_delay_pct":1.19,"carrier_delay_pct":36.49,"nas_delay_pct":32.49,"security_delay_pct":0.31,"late_aircraft_delay_pct":29.52}';
         return body;
     }; 
 
