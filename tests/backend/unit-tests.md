@@ -1,1 +1,6 @@
 # Unit tests go here
+| Test ID | Scenario Group | Decription | Test Steps | Expected Output | Factors | Metrics | Remarks |
+| :-      | :-             | :-         | :-         | :-              | :-      | :-      | :-      |
+| API04 | API Request Handling | Test if the API handles an API call to the "/api/flights/airlines_stats" route defined in flightsRoute.js correctly | Make a web request to the API with the "/api/flights/airlines_stats" route | The API returns a list of all the flights data according to the inputs with it's code correctly in JSON format | Correctness | 
+| API05 | API Request Handling | Test if the API handles an API call to the "/api/flights/airline_delays" route defined in flightsRoute.js correctly | Make a web request to the API with the "/api/flights/airline_delays" route | The API returns a list of different type of delays in percentage according to the airlines specify in the inputs with it's code correctly in JSON format | Correctness |
+| API06 | API Request Handling | Test if the API handles an API call to the "/api/flights/delays_comparison" route defined in flightsRoute.js correctly |  Make a web request to the API with the "/api/flights/delays_comparison" route | The API returns a list of average delays in minutes for the airlines specify in the inputs and all the airlines for each delay type | Correctness |
