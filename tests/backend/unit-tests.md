@@ -1,4 +1,3 @@
-# Unit tests go here
 | Test ID | Scenario Group | Decription | Test Steps | Expected Output | Factors | Metrics | Remarks |
 | :-      | :-             | :-         | :-         | :-              | :-      | :-      | :-      |
 | DB01    |Database setup| Test if get_flight_data.sh script downloads flight data required for database| 1. Open a terminal on the server and change the working directory to the directory containing the `get_flight_data.sh` script <br> 2. Run the script with the command: `bash get_flight_data.sh` | Flight data from 1990 to 2020 is downloaded from database to the same folder as the script | Correctness |-|-|
