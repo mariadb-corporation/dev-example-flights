@@ -80,7 +80,7 @@ export default class AirlinesFlightsInfo extends Component {
         
         return body;
     }; 
-    
+
     changeSelection(selection) {
         const lastSelected = selection
           .find(selected => this.state.selection.indexOf(selected) === -1);
