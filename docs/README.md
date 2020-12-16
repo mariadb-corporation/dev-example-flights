@@ -1,5 +1,14 @@
 # SQA Tasks (Vinuri)
-- Explain what activities are we going to do
+The purpose of this plan is to specify how Software Quality Assuarance will be performed throughout the system. This plan will describe the SQA activities namely the process, methods, standards to be performed and the techniques used to perform those tasks. The plan provides the necessary framework to ensure a consistent approach to software quality assurance throughout the project life cycle. 
+
+Scope: The scope of this plan applies to all stages of the system testing. It defines the approach that will be used to assess the software to provide insight to the functionality and quality. Adherence to the plan will continue throughout as needed, based on the results of the tests.
+
+Objective: The SQA teams Objective is to ensure that the product does not deviate from the software specification. The team will analyse the quality of the system at any stage for functionality enhancement and error detecton.
+
+The purpose of this plan:
+- Identify the resposnsiblities of the project team.
+- List the SQA standards, metrics and process.
+- Defines testing and audits and how they will be carried out.
 
 ### 2.0 Standards, Practices, Conventions, and Metrics (Hanna)
 This section highlights the standards, practices, conventions, and metrics to be applied to measure the quality of the application.
@@ -22,7 +31,14 @@ Testing helps discovers bugs or defects before delivering the program to the cli
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System testing is performed on a complete integrated system. It is carried out on the whole system in the context of either system requirements specifications (SRS) or functional requirements requirements or even both. The testing ends after no critical or priority related bugs are in an open state. If any low or medium priority bugs are in an open state, then it should be implemented with acceptance of customer.
 
 # Metrics (that we have set): (Vinuri)
-** additional documentation ** can show the template of documentation u guys follow for test case, peer review, bug report etc
+The following are the planned metrics that will be collected, reported, and maintained in the area of software quality assurance:
+- Adherence to schedule: Scedules and milestones will be tracked inorder to identify the prcentage of completion of the project.
+- Number of software defects found: This reflects the quality of the code. The goal is to produce code that is free of bugs. The  errors and the number of errors found during each testing phase will be recorded.
+- Software defect turnaround: This calculates the time and resources it takes to correct the identified defects. 
+- Size of the code (LOC): The size of the code and lines of codeused in each indivudual element will be used to estimate required testing effort and overall software productivity.
+- Programming time(persons-months): Used to estimate testing effort required. 
+- Storage Capacity: The storage capacity of the whole system will be used to measure the ease of implementation and productivity.
+- Test case statuse: The passed/failed percentage will be recorded during each testing phase.
 
 # Problem reporting and corrective actions (Yu Jie)
 All problems will be reported after each software review or testing is carried out. The leader of the project will review the bug report and determine the severity of the bug (low, medium, high) before passing it to the developer team that is responsible for fixing the bugs found. The developer team will apply the changes to the software according to the severity of bug while making sure there is no collision with any other part of the software. The outcome will be reviewed again to ensure all the bugs are fixed. 
