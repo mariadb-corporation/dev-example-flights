@@ -1,5 +1,14 @@
 # SQA Tasks (Vinuri)
-- Explain what activities are we going to do
+The purpose of this plan is to specify how Software Quality Assuarance will be performed throughout the system. This plan will describe the SQA activities namely the process, methods, standards to be performed and the techniques used to perform those tasks. The plan provides the necessary framework to ensure a consistent approach to software quality assurance throughout the project life cycle. 
+
+Scope: The scope of this plan applies to all stages of the system testing. It defines the approach that will be used to assess the software to provide insight to the functionality and quality. Adherence to the plan will continue throughout as needed, based on the results of the tests.
+
+Objective: The SQA teams Objective is to ensure that the product does not deviate from the software specification. The team will analyse the quality of the system at any stage for functionality enhancement and error detecton.
+
+The purpose of this plan:
+- Identify the resposnsiblities of the project team.
+- List the SQA standards, metrics and process.
+- Defines testing and audits and how they will be carried out.
 
 ### 2.0 Standards, Practices, Conventions, and Metrics (Hanna)
 This section highlights the standards, practices, conventions, and metrics to be applied to measure the quality of the application.
