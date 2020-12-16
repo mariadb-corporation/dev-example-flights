@@ -1,10 +1,25 @@
 # SQA Tasks (Vinuri)
 - Explain what activities are we going to do
 
-# Standards, practice conventions and metrics (Hanna)
-## Document standards:
-## Coding standards:
-## Test Standards:
+### 2.0 Standards, Practices, Conventions, and Metrics (Hanna)
+This section highlights the standards, practices, conventions, and metrics to be applied to measure the quality of the application.
+
+### Document standards
+The IEEE standards, with appropriate modifications, are used as guideline for documentation. The document describes the quality management plan that should be followed by the developers. Document needs to be well-written , spell checked and conforms to the conventions. In this document, HTML  is the preferred format for documentation, which is to be shared in computer readable form.
+
+### Coding Standards
+Coding standard gives a uniform appearance to the code even though it is written by different engineers. It helps in improving readability and maintainability of the code. The coding standards are as follows.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Phyton and JavaScript naming conventions is used throughout the code. The application contains multiple API projects where its either written using Phyton or JavaScript. Hence, naming conventions are followed respectively. The client, which communicates with the API, is written in JavaScript. The use and creation a class or variable name should be understandable and accurately describes its purpose for easy understanding. Local variables however should be named using camel case which starts with a small letter where as Global variables should start with a capital letter. Throw statements, or also known as throw an exception is used under each function. If an error occurs, JavaScript will stop and generate an error message. This helps simplify the debugging stage. Next, for better understanding and readability of the code, proper indentation is followed. 
+
+### Test Standards
+Testing helps discovers bugs or defects before delivering the program to the client. This guarantees the quality of the software. Unit testing, integration testing and system testing are done in this software testing. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Unit testing should be done during the very early stage of development. Each functions, modules or units are isolated, then tested manually to check whether it is working as intended. Bugs identified are fixed before proceeding to the next phase.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After the units have been unit tested, integration testing is performed. In this testing, units are integrated one by one until all the units are integrated. This is to ensure they can be incorporated with each other without error, and validate whether the requirements are implemented correctly or not. The testing is done simultaneously with the development as some units are not available to be test at times. The integration tests ends after all the integration test cases has been executed.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System testing is performed on a complete integrated system. It is carried out on the whole system in the context of either system requirements specifications (SRS) or functional requirements requirements or even both. The testing ends after no critical or priority related bugs are in an open state. If any low or medium priority bugs are in an open state, then it should be implemented with acceptance of customer.
 
 # Metrics (that we have set): (Vinuri)
 ** additional documentation ** can show the template of documentation u guys follow for test case, peer review, bug report etc
@@ -16,12 +31,11 @@ All problems will be reported after each software review or testing is carried o
 Git is used as the version control system to manage the documents and source code of the project. It is installed and maintained on the local system of each team member's devices and provides a self-contained record of the ongoing programming versions. Github is also used as an assist together with Git to allow team collaboration through cloud. GitHub is a code hosting platform that provides Git repository hosting service. It allows the team members to share their codes or documents to each other through remote repository and carry out version control at the same time.   
 
 # Testing methodology: (Ka Shing)
-
 The testing team follows closely alongside every step of the development process. To ensure that all requirements are met and bugs are fixed as soon as possible, several testing methodologies are employed. The testing methodologies that were employed include:
 1. Unit testing
 2. Integration testing
 3. System testing
-4. UI/UX testing
+4. UI testing
 
 ## Unit testing
 Unit testing is a software testing process which focuses on inidvidual units of source code, such as a functions in a program.  Unit tests are usually written once and reused so that the tests can be automated after a change in the source code. Our team will take a semi-automated approach to unit testing. The purpose of unit testing is to ensure that each unit performs as intended and helps to speed up the debugging process during and after development. Unit tests are white box tests as the test designers have to understand the inputs and outputs of the unit to test it effectively. There are a few guidelines set by our team for unit testing:
@@ -41,6 +55,8 @@ Integration testing should take place after unit testing. It tests the integrati
 ## System testing
 System testing is a black-box testing technique and it does not require internal knowledge of the code. It is done after the integration testing and it mainly focus on testing the functionality and features of the system as a whole. Inputs are provided to the system and the outputs are verified according to the expectations stated in the test cases. Test cases is created at the beginning to determine all the aspects to be covered in the system testing. Each test cases are written based on the real-time usage of the software. After the execution of all the test cases, any bugs found are documented in the bug report. 
 
+## UI testing
+UI testing is important to make the usability of application easier for users. UI testing is done through the web server, where the visual elements available are manipulated. For testing mobile compatibility, the application is access through the available search engine on mobile. To determine the portability of the application, the application needs to be  accessed through different browsers and operating system. All the available widgets such as dropdown bars and buttons need to be tested to check whether it is working as intended and either it responds to user events such as mouse clicks. Layout of the application should be tested to determine whether the GUI elements aligns and responds accordingly to the resize of the web appplication. Position of GUI elements also need to be tested by accessing the application through different screen resolutions. Therefore, consistency of user interface displayed can be determine regardless of the size of monitor.  By accessing the application through different screen resolutions, the readibility of font used can be tested. This is to determine whether the font type and size used is clear and easy to read. For the purpose of testing the display of error message, leave the origin and destination empty.This error message should be informative so user will be informed of the error made. 
 
 # Records – collection, maintenance and retention (Ka Shing)
 Documentation related to SQA is kept for future reference and to be shared with stakeholders. The Software Quality Assurance plan as well as the Test Case Documentation will be collected, maintained, and retained in our Github repository. In addition, the results of the tests will be maintained as quality records for future reference.
