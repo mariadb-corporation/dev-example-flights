@@ -47,8 +47,12 @@ To get started using MariaDB locally you can choose one of the following options
 
 * [Download and install MariaDB (Community or Enterprise) directly from mariadb.com](https://mariadb.com/docs/deploy/installation/) 
 
-* [Download and install MariaDB using the official MariaDB Community Server 10.5 Docker Image available at hub.docker.com](https://hub.docker.com/r/mariadb/columnstore)
+* [Download and install MariaDB using the official MariaDB Community Server 10.6 Docker Image available at hub.docker.com](https://hub.docker.com/_/mariadb)
 
+* [Download and install MariaDB using the official MariaDB Community Server 10.5 Docker Image available at hub.docker.com](https://hub.docker.com/r/mariadb/columnstore)  (**MariaDB ColumnStore pre-installed**)
+
+**Note:** Unless you are using the previously specified Docker Image you will need to [install the ColumnStore engine](https://mariadb.com/kb/en/installing-and-configuring-mariadb-columnstore/).
+ 
 ### MariaDB SkySQL <a name="skysql">
 
 [SkySQL](https://mariadb.com/products/skysql/) is the first and only database-as-a-service (DBaaS) to bring the full power of MariaDB Platform to the cloud, including its support for transactional, analytical and hybrid workloads. Built on Kubernetes, and optimized for cloud infrastructure and services, SkySQL combines ease of use and self-service with enterprise reliability and world-class support – everything needed to safely run mission-critical databases in the cloud, and with enterprise governance.
@@ -61,6 +65,8 @@ To get started using MariaDB locally you can choose one of the following options
     </kbd>
 </p>
 
+**Note:** Once you've signed up for and accessed MariaDB SkySQL you will need to create a new "Analytical" service, which provides an instance of MariaDB ColumnStore.
+    
 ## Getting started <a name="getting-started"></a>
 
 In order to run the Flights application you will need to have a MariaDB instance to connect to. For more information please check out "[Get Started with MariaDB](https://mariadb.com/get-started-with-mariadb/)".
