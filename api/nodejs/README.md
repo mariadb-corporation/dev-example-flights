@@ -70,7 +70,6 @@ var pools = [
     port: process.env.DB_PORT,
     database: process.env.DB_NAME,
     multipleStatements: true,
-    connectionLimit: 5,
     // 3.) Add an "ssl" property to the connection pool configuration, using the serverCert const defined above
     ssl: {
       ca: serverCert
