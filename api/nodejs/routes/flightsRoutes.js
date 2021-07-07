@@ -2,7 +2,7 @@
 
 let express = require("express"),
     router = express.Router(),
-    pool = require('../db');
+    db = require('../db');
 
 // GET - general flight filter
 router.get("/airlines_stats", async (req, res, next) => {
@@ -13,9 +13,7 @@ router.get("/airlines_stats", async (req, res, next) => {
     var month = req.query.m;
     var day = req.query.d;
 
-    let conn;
     try {
-        conn = await pool.getConnection();
         var query = "select " + 
                     "q.carrier, " +
                     "q.airline, " +
@@ -35,7 +33,7 @@ router.get("/airlines_stats", async (req, res, next) => {
                            "f.dest = ? and " +
                            "f.year >= ? and " + 
                            "f.year <= ?";
-
+                        
         if (month !== null && !isNaN(month)) {
             query += " and f.month = " + month;
         }
@@ -46,12 +44,10 @@ router.get("/airlines_stats", async (req, res, next) => {
 
         query += " group by a.airline, f.carrier) q order by flight_count desc;";
 
-        var rows = await conn.query(query, [origin, dest, yearFrom, yearTo]);
-        res.send(rows);
+        const results = await db.pool.query(query, [origin, dest, yearFrom, yearTo]);
+        res.send(results);
     } catch (err) {
         throw err;
-    } finally {
-        if (conn) return conn.release();
     }
 });
 
@@ -65,9 +61,7 @@ router.get("/airline_delays", async (req, res, next) => {
     var month = req.query.m;
     var day = req.query.d;
 
-    let conn;
     try {
-        conn = await pool.getConnection();
         var query = "select " +
                         "round(100 * (weather_delayed / total_delayed), 2) weather_delay_pct, " +
                         "round(100 * (carrier_delayed / total_delayed), 2) carrier_delay_pct, " +
@@ -100,12 +94,10 @@ router.get("/airline_delays", async (req, res, next) => {
 
         query += " group by a.airline, f.carrier) a) b";
 
-        var rows = await conn.query(query, [origin, dest, airline, yearFrom, yearTo]);
-        res.send(rows[0]);
+        const results = await db.pool.query(query, [origin, dest, airline, yearFrom, yearTo]);
+        res.send(results[0]);
     } catch (err) {
         throw err;
-    } finally {
-        if (conn) return conn.release();
     }
 });
 
@@ -119,9 +111,7 @@ router.get("/delays_comparison", async (req, res, next) => {
     var month = req.query.m;
     var day = req.query.d;
 
-    let conn;
     try {
-        conn = await pool.getConnection();
         var query = "select " +
                         "avg(carrier_delay) carrier, " +
                         "avg(nas_delay) nas, " +
@@ -165,13 +155,11 @@ router.get("/delays_comparison", async (req, res, next) => {
                         query += " and f.day = " + day;
                     }
 
-        var rows = await conn.query(query, [origin, dest, airline, yearFrom, yearTo, origin, dest, yearFrom, yearTo]);
-        res.send(rows);
+        const results = await db.pool.query(query, [origin, dest, airline, yearFrom, yearTo, origin, dest, yearFrom, yearTo]);
+        res.send(results);
     } catch (err) {
         throw err;
-    } finally {
-        if (conn) return conn.release();
-    }
+    } 
 });
 
 module.exports = router;

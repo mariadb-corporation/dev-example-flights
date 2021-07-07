@@ -5,8 +5,8 @@ require('dotenv').config();
 // * Remember to change the location of "skysql_chain.pem" to wherever you placed it!
 // * To use just uncomment the two lines below and the 'ssl' property (and value) within the connection pool configuration
 
-//const fs = require("fs");
-//const serverCert = [fs.readFileSync("skysql_chain.pem", "utf8")];
+const fs = require("fs");
+const serverCert = [fs.readFileSync("skysql_chain.pem", "utf8")];
 
 const pool = mariadb.createPool({
   host: process.env.DB_HOST, 
@@ -15,22 +15,12 @@ const pool = mariadb.createPool({
   port: process.env.DB_PORT,
   database: process.env.DB_NAME,
   multipleStatements: true,
-  connectionLimit: 5
-  /*
-  ,ssl: {
+  ssl: {
     ca: serverCert
   }
-  */
 });
 
-module.exports={
-    getConnection: function(){
-      return new Promise(function(resolve,reject){
-        pool.getConnection().then(function(connection){
-          resolve(connection);
-        }).catch(function(error){
-          reject(error);
-        });
-      });
-    }
-  } 
+// Expose the Pool object within this module
+module.exports = Object.freeze({
+  pool: pool
+});
