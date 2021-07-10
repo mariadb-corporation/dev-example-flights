@@ -81,7 +81,7 @@ This app also uses the MariaDB Python Connector to connect to and communicate wi
 Note: on Ubuntu you may need to install prerequisites 
 
 ```
-sudo apt-get install python3.8-dev
+sudo apt-get install python3.x-dev
 sudo apt-get install build-essential
 sudo apt-get install -y libmariadb-dev
 ```
