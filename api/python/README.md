@@ -28,6 +28,7 @@ DB_PORT=<port_number>
 DB_USER=<username>
 DB_PASS=<password>
 DB_NAME=flights
+SSL_CA=<path/skysql_chain.pem>
 ```
 
 **Connection details**
@@ -40,7 +41,8 @@ config = {
     'port': int(os.getenv("DB_PORT")),
     'user': os.getenv("DB_USER"),
     'password': os.getenv("DB_PASS"),
-    'database': os.getenv("DB_NAME")
+    'database': os.getenv("DB_NAME"),
+    'ssl_ca': os.getenv("SSL_CA")
 }
 ```
 
@@ -76,10 +78,17 @@ $ . venv/bin/activate activate
 
 This app also uses the MariaDB Python Connector to connect to and communicate with MariaDB databases. 
 
+Note: on Ubuntu you may need to install prerequisites 
+
+```
+sudo apt-get install python3.8-dev
+sudo apt-get install build-essential
+sudo apt-get install -y libmariadb-dev
+```
 Install the necessary packages.
 
 ```bash
-$ ./venv/pip3 install python-dotenv flask mariadb simplejson
+$ ./venv/bin/pip3 install python-dotenv flask mariadb simplejson
 ```
 
 ### Run the app <a name="run-app"></a>
