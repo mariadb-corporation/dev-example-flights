@@ -43,7 +43,7 @@ This sample application, no matter which API project you target, will requires t
     </kbd>
 </p>
 
-To get started using MariaDB locally you can choose one of the following options:
+To get started using MariaDB locally you can:
 
 * [Download and install MariaDB (Community or Enterprise) directly from mariadb.com](https://mariadb.com/downloads) 
 
