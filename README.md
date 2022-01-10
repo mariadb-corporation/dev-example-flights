@@ -1,5 +1,15 @@
 # Flights
 
+⚠️⚠️⚠️ <br /><br />
+**[UNMAINTAINED]** <br /> This repository has been split up (by back-end language), moved and is currently maintained at the following locations:
+* [Node.js (basic)](https://github.com/mariadb-developers/places-app-nodejs)
+* [Python (basic)](https://github.com/mariadb-developers/places-app-python)
+* [JDBC (Spring Data)](https://github.com/mariadb-developers/places-app-jdbc-spring)
+* [R2DBC (Spring Data)](https://github.com/mariadb-developers/places-app-r2dbc-spring)
+<br />
+⚠️⚠️⚠️ 
+<br /><br /> 
+
 **Flights** is a web application, backed by the power of the MariaDB Connectors and [MariaDB ColumnStore database](https://mariadb.com/docs/features/mariadb-columnstore/), allows you to analyze millions [flight records from the United States Department of Transportation](https://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236&DB_Short_Name=On-Time) in real time without needing to add any indexes!
 
 <p align="center" spacing="10">
